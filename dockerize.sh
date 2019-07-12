@@ -9,5 +9,5 @@ docker build \
     -t $ORGANIZATION/$NAME \
     -t $ORGANIZATION/$NAME:`date +%Y-%m-%d` \
     -t $ORGANIZATION/$NAME:latest \
-    -f $PARENT/docker/Dockerfile \
+    -f $PARENT/Dockerfile \
     $PARENT
