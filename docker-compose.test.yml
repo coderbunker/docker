@@ -1,4 +1,4 @@
 sut:
   build: ..
-  dockerfile: docker/Dockerfile
+  dockerfile: Dockerfile
   command: pytest /src
