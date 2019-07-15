@@ -2,7 +2,7 @@
 CURRENTDIR=$(dirname $0)
 PARENT=$(realpath $CURRENTDIR/..)
 NAME=$(basename $PARENT)
-. $CURRENTDIR/.env
+. $PARENT/.env-template
 
 echo "Running $NAME"
 docker run -it \
