@@ -1,7 +1,9 @@
 #!/bin/sh
+
 CURRENTDIR=$(dirname $0)
 PARENT=$(realpath $CURRENTDIR/..)
 NAME=$(basename $PARENT)
+ 
 . $PARENT/.env-template
 
 echo "Building docker container $ORGANIZATION/$NAME"
