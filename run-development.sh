@@ -2,6 +2,8 @@
 CURRENTDIR=$(dirname $0)
 PARENT=$(realpath $CURRENTDIR/..)
 NAME=$(basename $PARENT)
+ORGANIZATION=$(basename $(dirname $PARENT))
+
 . $PARENT/.env-template
 
 echo "Running $NAME"
