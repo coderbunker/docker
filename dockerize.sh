@@ -5,7 +5,7 @@ PARENT=$(realpath $CURRENTDIR/..)
 NAME=$(basename $PARENT)
 ORGANIZATION=$(basename $(dirname $PARENT))
 
-. $PARENT/.env-template
+. $PARENT/.env
 echo "Building docker container $ORGANIZATION/$NAME"
 docker build \
     -t $ORGANIZATION/$NAME \
