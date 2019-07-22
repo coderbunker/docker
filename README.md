@@ -17,8 +17,8 @@ Create Dockerfile based on specified environments of your project to create teh 
 
 
 # Add to Dockerhub
-Ensure organisation has granted access to the git repositories.Connect dockerhub with github via UI interface
-...
+Ensure organisation has granted access to the git repositories.Connect dockerhub with github via UI interface. Under Account setting tab on docker hub, scroll down to linked accounts header and connect to github as a provider.
+
 
 ## Setup autotest
 The docker-compose.test.yml file should defines a ` sut ` service that lists the tests to be run. The docker-compose.test.yml file should be located in the same directory that contains the Dockerfile used to build the image.
@@ -26,6 +26,7 @@ The docker-compose.test.yml file should defines a ` sut ` service that lists the
  * You can define any number of linked services in this file. The only requirement is that sut is defined. Its return code determines if tests passed or not. Tests pass if the sut service returns 0, and fail otherwise.
 
 * Note: Only the sut service and all other services listed in depends_on are started. For instance, if you have services that poll for changes in other services, be sure to include the polling services in the depends_on list to make sure all of your services start.
+* https://docs.docker.com/docker-hub/builds/automated-testing/
 
 ## Setup deployment
 
@@ -40,8 +41,7 @@ This shellscript is used to build the image for the Dockerfile. After image is b
 
 
 # Run ./run-development.sh
-This shellscript is used to run the image that was build.
-...
+This shellscript is used to run the image that was built.
 
 
 
